@@ -231,13 +231,7 @@ body{
         padding-left: 2em;
     }
 
-    #contact{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        height: 40em;
-    }
+
 
     .second-line{
         position: relative;
@@ -249,6 +243,18 @@ body{
 
     #main-nav{
         display: none;
+    }
+
+    .main-list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .main-list a{
+        flex: 1;
+        width: 100%;
     }
 
     .main-list:hover{
@@ -280,12 +286,39 @@ body{
 
 
 
+
+    
+}
+
+@media (max-width: 970px) {
+
+    #footer{
+        height: 44em;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        align-items: center !important;
+    }
+
+    .footer-menu{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
     #info-sk{
-
         grid-template-columns: repeat(2, 1fr) !important;
-        height: 15em;
+        height: 10em;
         width: 90%;
+    }
 
+    .info h3{
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
     }
 
     #info-sk div{
@@ -299,13 +332,16 @@ body{
 
     #info-pp{
         grid-template-columns: repeat(2, 1fr) !important;
-        height: 15em;
+        height: 10em;
         width: 90%;
 
     }
 
     .info p{
         color: #f3f3eb;
+        margin: 6px 0 6px 0;
+        padding: 0;
+        font-size: 0.95em;
     }
 
     .info p:visited{
@@ -331,26 +367,13 @@ body{
         height: 20em;
         width: 90%;
     }
-    
-}
 
-@media (max-width: 970px) {
-
-    #footer{
-        height: 44em;
-        display: flex !important;
-        flex-direction: column !important;
-        flex-wrap: wrap;
-        align-items: center !important;
-    }
-
-    .footer-menu{
-        flex: 1;
-        width: 100%;
+    #contact{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: start;
+        justify-content: start;
+        align-items: center;
+        height: 40em;
     }
 }
 

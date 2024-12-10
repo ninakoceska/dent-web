@@ -17,6 +17,8 @@ function myFunction() {
         div.style.height = '11em'
         div.style.flexDirection = 'column';
 
+        myList.style.width = '100%';
+
         nav = document.getElementById('main-nav');
         nav.style.display = 'flex';
         nav.style.flexDirection = 'column';
@@ -62,4 +64,8 @@ function makeCall() {
 
 function openIndex(){
     window.location.href='index.html'
+}
+
+function openIndex2(){
+    window.location.href='../index.html'
 }

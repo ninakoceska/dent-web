@@ -65,4 +65,14 @@ button a{
         height: auto;
     }
 
+    .image{
+        width: 70vw;
+        height: auto;
+    }
+
+    .content-text{
+        width: 70vw;
+        height: auto;
+    }
+
 }
