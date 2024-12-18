@@ -133,12 +133,13 @@ body{
 }
 
 #contact{
-    height: 36em;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #f3f3eb;
     color: #1C3D41;
+    padding-bottom: 3em;
 }
 
 .info{
@@ -374,7 +375,115 @@ body{
         justify-content: start;
         align-items: center;
         height: 40em;
+        padding-bottom: 0;
     }
 }
+
+/*Uslugi index*/
+
+#index-sercives{
+    height: auto;
+    width: 100%;
+    background-color: #f3f3eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    place-items: center;
+}
+
+#index-sercives h2{
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+    color: #1C3D41;
+}
+
+#services-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.card{
+    width: 17em;
+    height: 25em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    padding-top: 12px;
+    width: 15em;
+    height: auto;
+}
+
+.card h2{
+    height: 1.6em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.card p{
+    font-size: 0.7em;
+    height: 1.4em;
+    text-align: center;
+    padding: 0 3px 0 3px;
+}
+
+.card a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    padding-top: 0.8em;
+}
+
+.card a:visited{
+    color: white;
+}
+
+.card button{
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    border: none;
+    background-color: #729494;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#left{
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#right{
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
 
 
