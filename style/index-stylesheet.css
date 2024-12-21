@@ -1,275 +1,490 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Др. Џамбазовски</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/index-stylesheet.css">
-    <script src="script/script.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-</head>
-<body>
 
-
-<div id="header">
-
-    <div class="top-line">
-
-        <div class="top-line-left">
-
-            <a> <i class="fa-solid fa-location-dot"></i>&nbsp;Анкарска 23, Скопје &nbsp;</a><a> <i class="fa-solid fa-location-dot"></i> &nbsp; Бул. Гоце Делчев 56, Прилеп</a>
-        </div>
-
-        <div class="top-line-right">
-            <a href="https://www.facebook.com/p/PZU-Dr-Dzambazovski-100084853701404/?locale=mk_MK" target="_blank"><i class="fab fa-facebook"></i> PZU Dr. Dzambazovski</a>
-            <a href="https://www.instagram.com/dr.dzambazovski/" target="_blank"><i class="fab fa-instagram" ></i> dr.dzambazovski</a>
-        </div>
-
-    </div>
-
-    <div class="second-line">
-
-        <img src="images/Logo-01.jpg" alt="" id="logo" onclick="openIndex()">
-
-
-            <div class="hamburger" id="hamburger-icon" onclick="myFunction()"  href="sc:void(0);" >
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-
-
-            <ul id="main-nav">
-                <li class="main-list"><a href="index.html">Почетна</a></li>
-                <li class="main-list" id="uslugi"><a href="services.html">Услуги</a>
-
-                    <ul class="dropdown">
-                        <li><a href="services/service-1.html">Мост каде што нема крајни заби</a></li>
-                        <li><a href="services/service-2.html">Ламинати</a></li>
-                        <li><a href="services/service-3.html">Протези</a></li>
-                        <li><a href="services/service-4.html">Избелување</a></li>
-                    </ul>
-
-
-                </li>
-
-                <li class="main-list"><a href="gallery.html">Галерија</a></li>
-                <li class="main-list"><a href="about.html">За нас</a></li>
-                <li class="main-list"><a href="contact.html">Контакт</a></li>
-
-            </ul>
-
-        </div>
-
-        <div id="mobile-menu"></div>
-
-</div>
-
-
-
-<div id="home">
-
-    <div class="welcome-container">
-
-        <h1>Добредојдовте!</h1>
-        <h2>Официјална страна на Стоматолошка ординација <br> Др. Џамбазовски</h2>
-        <h3>Вашата насмевка е наш приоритет!</h3>
-        <button class="call-now" onclick="makeCall()">
-            <a>Закажете бесплатна консултација</a>
-        </button>
-
-    </div>
-
-    <div class="image-container">
-
-        <img src="images/how-long-does-a-dentist-appointment-take.jpg" class="home-image">
-
-    </div>
-
-
-
-</div>
-
-
-<div id="index-sercives">
-
-    <h2>Услуги кои ги нудиме</h2>
-
-    <div id="services-wrapper">
-        <i id="left" class="fa-solid  fas fa-angle-left" onclick="moveCarousel('left')"></i>
-
-        <div class="services-list">
-        <div class="card">
-            <img src="images/most.jpg">
-            <h2>Мост каде што нема крајни заби</h2>
-            <p>Изработка циркуларен фиксен мост со или без импанти</p>
-            <button><a href="services/service-1.html">Дознај повеќе...</a></button>
-        </div>
-
-        <div class="card">
-            <img src="images/laminati.jpg">
-            <h2>Ламинати и HOLLYWOOD Smile</h2>
-            <p>Промена на изгледот и насмевката без оштетување на забите</p>
-            <button><a  href="services/service-2.html">Дознај повеќе...</a></button>
-        </div>
-
-        <div class="card">
-            <img src="images/vilica.png">
-            <h2>Протези</h2>
-            <p>Изработка на тотални вилици</p>
-            <button><a  href="services/service-3.html">Дознај повеќе...</a></button>
-        </div>
-
-        <div class="card">
-            <img src="images/izbeluvanje.jpg">
-            <h2>Избелување</h2>
-            <p>Избелување во ординација или во домаашни услови</p>
-            <button><a  href="services/service-4.html">Дознај повеќе...</a></button>
-        </div>
-        </div>
-
-
-        <i id="right" class="fa-solid fas fa-angle-right" onclick="moveCarousel('right')"></i>
-    </div>
-</div>
-
-
-<div id="contact">
-
-
-
-    <div class="location-container">
-
-        <h2>Избери локација</h2>
-
-        <div class="btn-container">
-            <button onclick="locationSK()">Скопје</button>
-            <button onclick="locationPP()">Прилеп</button>
-        </div>
-
-        <iframe id="sk-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11774.780570472481!2d21.392103736362266!3d41.99795772629826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6c0dddbd261fe607%3A0xd615f4221bd98d5e!2z0JTRgC4g0I_QsNC80LHQsNC30L7QstGB0LrQuCAtIERyLiBEemFtYmF6b3Zza2k!5e0!3m2!1smk!2smk!4v1733450276467!5m2!1smk!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe id = "pp-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.204169083656!2d21.54599161709484!3d41.34402980291249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1356ebe0de86137b%3A0x214aff6a3c29fbca!2z0JTRgC4g0I_QsNC80LHQsNC30L7QstGB0LrQuCAtIERyLiBEemFtYmF6b3Zza2k!5e0!3m2!1smk!2smk!4v1733450607750!5m2!1smk!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div id="info-sk" class="info" style="display: grid; justify-content: center; align-items: center;">
-        <div>
-        <h3>Ординација:</h3>
-        <p>Скопје</p>
-        </div>
-        <div>
-        <h3>Адреса:</h3>
-        <p>Анкарска 23</p>
-        </div>
-        <div>
-        <h3>Телефонски број:</h3>
-        <p class="tel" onclick="makeCall()">+38977840982</p>
-        </div>
-        <div>
-        <h3>Е-маил:</h3>
-        <p>dzambazovskia@gmail.com</p>
-        </div>
-    </div>
-
-    <div id="info-pp" class="info" style="display: none; justify-content: center; align-items: center;">
-        <div>
-            <h3>Ординација:</h3>
-            <p>Прилеп</p>
-        </div>
-        <div>
-            <h3>Адреса:</h3>
-            <p>Булевар Гоце Делчев 56</p>
-        </div>
-        <div>
-            <h3>Телефонски број:</h3>
-            <p class="tel" onclick="makeCall()">+38975447458</p>
-        </div>
-        <div>
-            <h3>Е-маил:</h3>
-            <p>dzambazovskia@gmail.com</p>
-        </div>
-    </div>
-
-
-
-
-</div>
-
-<div id="footer">
-
-    <div class="footer-menu">
-
-        <ul>
-            <h2>Мени</h2>
-            <li>
-                <a href="index.html">Почетна</a>
-            </li>
-            <li>
-                <a href="gallery.html">Галерија</a>
-            </li>
-            <li>
-                <a href="contact.html">Контакт и Локација</a>
-            </li>
-            <li>
-                <a href="about.html">За нас</a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="footer-menu">
-
-        <ul>
-            <h2>Услуги кои ги нудиме</h2>
-            <li>
-                <a href="services/service-1.html">Мост каде што нема крајни заби</a>
-            </li>
-            <li>
-                <a href="services/service-2.html">Ламинати</a>
-            </li>
-            <li>
-                <a href="services/service-4.html">Избелување</a>
-            </li>
-            <li>
-                <a href="services/service-3.html">Протези</a>
-            </li>
-        </ul>
-
-    </div>
-
-    <div class="footer-menu">
-
-        <ul>
-            <h2>Заследете не на <br>социјалните мрежи</h2>
-            <li>
-                <a href="https://www.facebook.com/p/PZU-Dr-Dzambazovski-100084853701404/?locale=mk_MK" target="_blank">Facebook</a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/dr.dzambazovski/" target="_blank">Instagram</a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="footer-menu">
-
-        <ul>
-            <h2>Контакт</h2>
-            <li onclick="makeCall()">
-                +38977840982
-            </li>
-            <li onclick="makeCall()">
-                +38975447458
-            </li>
-            <li>
-                dzambazovskia@gmail.com
-            </li>
-        </ul>
-    </div>
-
-</div>
-
-
-</body>
-</html>
+body{
+    margin:0;
+    border: 0;
+    padding:0;
+
+    font-family:   'Arial', sans-serif;
+}
+
+#header{
+    width: 100%;
+    position: sticky;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    height: 9em;
+    top: 0;
+}
+
+#mobile-menu{
+    display: none;
+}
+
+.top-line{
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #729494;
+    color: #1C3D41;
+}
+.top-line a{
+    color: #1C3D41;
+    text-decoration: none;
+    cursor: pointer;
+}
+.top-line a:visited{
+    color: #1C3D41;
+}
+
+.second-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 6em;
+    background-color: #f3f3eb;
+}
+
+#logo{
+    width: 25em;
+    height: auto;
+}
+
+
+#main-nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 30em;
+
+}
+
+.main-list{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-list:hover{
+    background-color: #729494;
+}
+
+.main-list a{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #1C3D41;
+    height: 100%;
+}
+.dropdown{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+#home{
+    width: 100%;
+    height: 40em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../images/5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f3f3eb;
+}
+
+.home-image{
+    width: 28em;
+    height: auto;
+}
+
+.call-now{
+    height: 4.3em;
+    background-color: #f3f3eb;
+    cursor: pointer;
+    border: none;
+}
+
+.call-now a{
+    color: #1C3D41;
+    text-decoration: none;
+}
+.call-now:hover{
+    background-color: #729494;
+}
+
+#contact{
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f3f3eb;
+    color: #1C3D41;
+    padding-bottom: 3em;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0c4c54;
+    width: 17em;
+    color: #f3f3eb;
+    border-radius: 1em;
+}
+
+.btn-container button{
+    border: none;
+    background-color: #0c4c54;
+    color: #f3f3eb;
+    height: 3.8em;
+    width: 7em;
+}
+.btn-container button:hover{
+    background-color: #729494;
+}
+
+#footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #1C3D41;
+    flex-wrap: wrap;
+
+}
+
+.footer-menu{
+    color: #f3f3eb;
+    flex: 1;
+    height: 100%;
+    border-right: 1px solid #729494;
+}
+
+.footer-menu ul{
+    list-style: none;
+}
+
+#footer a{
+    color: #f3f3eb;
+    text-decoration: none;
+    cursor: pointer;
+}
+#footer a:visited{
+    color: #f3f3eb;
+}
+
+
+@media(max-width: 767px) {
+    .image-container{
+        display: none;
+    }
+
+    .top-line-right{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .top-line-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        font-size: 0.9em;
+    }
+
+    .top-line a{
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+
+
+
+    #home{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 35em;
+    }
+
+    .welcome-container{
+        padding-left: 2em;
+    }
+
+
+
+    .second-line{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #main-nav{
+        display: none;
+    }
+
+    .main-list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .main-list a{
+        flex: 1;
+        width: 100%;
+    }
+
+    .main-list:hover{
+        background-color: #f3f3eb;
+    }
+
+    #logo{
+        width: 20em;
+        height: auto;
+    }
+
+    .hamburger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 3em;
+        width: 3em;
+        color: #1C3D41;
+        margin-right: 1em;
+    }
+
+    .hamburger .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
+
+
+
+
+    
+}
+
+@media (max-width: 970px) {
+
+    #footer{
+        height: 44em;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap;
+        align-items: center !important;
+    }
+
+    .footer-menu{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    #info-sk{
+        grid-template-columns: repeat(2, 1fr) !important;
+        height: 10em;
+        width: 90%;
+    }
+
+    .info h3{
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+    }
+
+    #info-sk div{
+        flex: 1;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #info-pp{
+        grid-template-columns: repeat(2, 1fr) !important;
+        height: 10em;
+        width: 90%;
+
+    }
+
+    .info p{
+        color: #f3f3eb;
+        margin: 6px 0 6px 0;
+        padding: 0;
+        font-size: 0.95em;
+    }
+
+    .info p:visited{
+        color: #f3f3eb;
+    }
+
+    #info-pp div{
+        flex: 1;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    iframe{
+        height: 10em;
+        width: 100%;
+    }
+
+    .location-container{
+        height: 20em;
+        width: 90%;
+    }
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 40em;
+        padding-bottom: 0;
+    }
+}
+
+/*Uslugi index*/
+
+#index-sercives{
+    width: 100%;
+    height: auto;
+    background-color: #f3f3eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#services-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+#services-wrapper i{
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.services-list{
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+    user-select: none;
+    gap: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.card{
+    flex: 0 0 calc(33.33% - 1rem);
+    height: 28em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+
+}
+
+.card img{
+    width: 15em;
+    height: auto;
+}
+.card p{
+    height: 2em;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.card h2{
+    height: 2em;
+    font-size: 1.2em;
+    padding: 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card button{
+    width: 100%;
+    height: 3em;
+    background-color: #0c4c54;
+    border: none;
+    margin-top: 0.5em;
+}
+.card button:hover{
+    background-color: #729494;
+}
+
+.card a{
+    color: #f3f3eb;
+    text-decoration: none;
+}
+.card a:visited{
+    color: #f3f3eb;
+}
+
+@media (max-width: 940px) {
+    .card {
+        flex: 0 0 calc(50% - 1rem); /* Show 2 cards on smaller screens */
+    }
+}
+
+@media (max-width: 650px) {
+    .card {
+        flex: 0 0 100%; /* Show 1 card on very small screens */
+    }
+}
