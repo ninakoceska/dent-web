@@ -400,6 +400,12 @@ body{
     width: 90%;
     position: relative;
     overflow: hidden;
+    margin-bottom: 4em;
+}
+
+#index-sercives h2{
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 #services-wrapper i{
     font-size: 2rem;
@@ -407,10 +413,8 @@ body{
     user-select: none;
     margin: 0 10px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 2;
+    display: none;
 }
 
 .services-list{
@@ -419,14 +423,13 @@ body{
     user-select: none;
     gap: 1rem;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
 }
 
 
 .card{
-    flex: 0 0 calc(33.33% - 1rem);
     height: 28em;
     background-color: white;
     display: flex;
@@ -441,6 +444,7 @@ body{
 .card img{
     width: 15em;
     height: auto;
+    margin-top: 1em;
 }
 .card p{
     height: 2em;
@@ -478,13 +482,13 @@ body{
 }
 
 @media (max-width: 940px) {
-    .card {
-        flex: 0 0 calc(50% - 1rem); /* Show 2 cards on smaller screens */
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 650px) {
-    .card {
-        flex: 0 0 100%; /* Show 1 card on very small screens */
+    .services-list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
