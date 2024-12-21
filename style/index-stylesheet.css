@@ -485,6 +485,6 @@ body{
 
 @media (max-width: 760px) {
     .card {
-        flex: 0 0 100%; /* Show 1 card on very small screens */
+        flex: 0 0 100% !important; /* Show 1 card on very small screens */
     }
 }
