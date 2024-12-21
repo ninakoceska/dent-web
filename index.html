@@ -8,6 +8,8 @@
     <script src="script/script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 </head>
 <body>
@@ -98,9 +100,9 @@
     <h2>Услуги кои ги нудиме</h2>
 
     <div id="services-wrapper">
-        <i id="left" class="fa-solid  fas fa-angle-left"></i>
-    <div id="services-container">
+        <i id="left" class="fa-solid  fas fa-angle-left" onclick="moveCarousel('left')"></i>
 
+        <div class="services-list">
         <div class="card">
             <img src="images/most.jpg">
             <h2>Мост каде што нема крајни заби</h2>
@@ -128,9 +130,10 @@
             <p>Избелување во ординација или во домаашни услови</p>
             <button><a  href="services/service-4.html">Дознај повеќе...</a></button>
         </div>
-
         </div>
-        <i id="right" class="fa-solid fas fa-angle-right"></i>
+
+
+        <i id="right" class="fa-solid fas fa-angle-right" onclick="moveCarousel('right')"></i>
     </div>
 </div>
 

@@ -72,4 +72,3 @@ function openIndex2(){
 
 
 // slide show
-
