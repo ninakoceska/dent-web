@@ -479,7 +479,8 @@ body{
 
 @media (max-width: 940px) {
     .card {
-        flex: 0 0 calc(50% - 1rem); /* Show 2 cards on smaller screens */
+         
+        flex: 0 0 100% !important;/* Show 2 cards on smaller screens */
     }
 }
 
