@@ -35,8 +35,6 @@ function myFunction() {
 
 window.onload=function(){
     document.getElementById("pp-frame").style.display = "none";
-
-
 }
 
 function locationSK() {
@@ -60,6 +58,10 @@ function locationPP() {
 
 function makeCall() {
     window.location.href = "tel:+38977840982";
+}
+
+function openService(a){
+    window.location.href=a
 }
 
 function openIndex(){

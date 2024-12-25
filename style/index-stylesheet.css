@@ -377,6 +377,11 @@ body{
         height: 40em;
         padding-bottom: 0;
     }
+
+    .tel:visited{
+        color: #f3f3eb;
+        cursor: pointer;
+    }
 }
 
 /*Uslugi index*/
@@ -447,13 +452,14 @@ body{
     margin-top: 1em;
 }
 .card p{
-    height: 2em;
+    height: 1em;
     font-size: 0.8em;
+    padding-bottom: 0.3em;
     text-align: center;
 }
 
 .card h2{
-    height: 2em;
+    height: 0.2em;
     font-size: 1.2em;
     padding: 0.4em;
     display: flex;
@@ -464,7 +470,7 @@ body{
 
 .card button{
     width: 100%;
-    height: 3em;
+    height: 4em;
     background-color: #0c4c54;
     border: none;
     margin-top: 0.5em;
