@@ -69,70 +69,68 @@
 
 <div id="contact">
 
-
-
-    <div class="location-container">
-
+    <div class="location-picker">
         <h2>Избери локација</h2>
 
         <div class="btn-container">
             <button onclick="locationSK()">Скопје</button>
             <button onclick="locationPP()">Прилеп</button>
         </div>
-
-        <iframe id="sk-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11774.780570472481!2d21.392103736362266!3d41.99795772629826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6c0dddbd261fe607%3A0xd615f4221bd98d5e!2z0JTRgC4g0I_QsNC80LHQsNC30L7QstGB0LrQuCAtIERyLiBEemFtYmF6b3Zza2k!5e0!3m2!1smk!2smk!4v1733450276467!5m2!1smk!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <iframe id = "pp-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.204169083656!2d21.54599161709484!3d41.34402980291249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1356ebe0de86137b%3A0x214aff6a3c29fbca!2z0JTRgC4g0I_QsNC80LHQsNC30L7QstGB0LrQuCAtIERyLiBEemFtYmF6b3Zza2k!5e0!3m2!1smk!2smk!4v1733450607750!5m2!1smk!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    <div id="info-sk" class="info" style="display: grid; justify-content: center; align-items: center;">
-        <div>
-            <h3>Ординација:</h3>
-            <p>Скопје</p>
+    <div id="info-sk" class="info" style="display: flex; justify-content: center; align-items: center;">
+        <div class="lokacija">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Локација</h3>
+            <p>ул. Анкарска 23, Скопје</p>
         </div>
-        <div>
-            <h3>Адреса:</h3>
-            <p>Анкарска 23</p>
-        </div>
-        <div>
-            <h3>Телефонски број:</h3>
+
+        <div class="telefon">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Телефонски број</h3>
             <a class="tel" onclick="makeCall()">+38977840982</a>
         </div>
-        <div>
-            <h3>Е-маил:</h3>
+        <div class="email">
+            <i class="fas fa-envelope"></i>
+            <h3>Е-маил</h3>
             <p>dzambazovskia@gmail.com</p>
         </div>
     </div>
 
     <div id="info-pp" class="info" style="display: none; justify-content: center; align-items: center;">
-        <div>
-            <h3>Ординација:</h3>
-            <p>Прилеп</p>
+        <div class="lokacija">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Локација</h3>
+            <p>ул. Булевар Гоце Делчев 56, Прилеп</p>
         </div>
-        <div>
-            <h3>Адреса:</h3>
-            <p>Булевар Гоце Делчев 56</p>
-        </div>
-        <div>
-            <h3>Телефонски број:</h3>
+
+        <div class="telefon">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Телефонски број</h3>
             <a class="tel" onclick="makeCall()">+38975447458</a>
         </div>
-        <div>
-            <h3>Е-маил:</h3>
+        <div class="email">
+            <i class="fas fa-envelope"></i>
+            <h3>Е-маил</h3>
             <p>dzambazovskia@gmail.com</p>
         </div>
     </div>
 
 
+    <div class="location-container">
 
+        <!--        <iframe id="sk-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11774.780570472481!2d21.392103736362266!3d41.99795772629826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6c0dddbd261fe607%3A0xd615f4221bd98d5e!2z0JTRgC4g0I_QsNC80LHQsNC30L7QstGB0LrQuCAtIERyLiBEemFtYmF6b3Zza2k!5e0!3m2!1smk!2smk!4v1733450276467!5m2!1smk!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+        <iframe id ="pp-frame" src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
 </div>
 
 <div id="footer">
 
     <div class="footer-menu">
-
+        <h2>Мени</h2>
         <ul>
-            <h2>Мени</h2>
+
             <li>
                 <a href="index.html">Почетна</a>
             </li>
@@ -149,9 +147,9 @@
     </div>
 
     <div class="footer-menu">
-
+        <h2>Услуги</h2>
         <ul>
-            <h2>Услуги кои ги нудиме</h2>
+
             <li>
                 <a href="services/service-1.html">Мост каде што нема крајни заби</a>
             </li>
@@ -169,9 +167,9 @@
     </div>
 
     <div class="footer-menu">
-
+        <h2>Социјални мрежи</h2>
         <ul>
-            <h2>Заследете не на <br>социјалните мрежи</h2>
+
             <li>
                 <a href="https://www.facebook.com/p/PZU-Dr-Dzambazovski-100084853701404/?locale=mk_MK" target="_blank">Facebook</a>
             </li>
@@ -182,9 +180,9 @@
     </div>
 
     <div class="footer-menu">
-
+        <h2>Контакт</h2>
         <ul>
-            <h2>Контакт</h2>
+
             <li onclick="makeCall()">
                 +38977840982
             </li>
