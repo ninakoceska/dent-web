@@ -9,6 +9,7 @@ body{
     font-family:   'Arial', sans-serif;
 }
 
+
 #header{
     width: 100%;
     position: sticky;
@@ -105,12 +106,12 @@ body{
 }
 
 #home{
+    background-color: #f3f3eb;
     width: 100%;
     height: 40em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#f3f3eb;
     color: #f3f3eb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -119,6 +120,17 @@ body{
 
     width: 40em;
     height: auto;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .welcome-container{
@@ -309,7 +321,6 @@ iframe{
 
 }
 .footer-menu ul li{
-    width: 100%;
     margin-top: 0.4em;
     margin-bottom: 0.4em;
     display: flex;
@@ -328,9 +339,16 @@ iframe{
 
 
 @media(max-width: 767px) {
-    /*.image-container{*/
-    /*    display: none;*/
-    /*}*/
+
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .image-container{
+        display: none;
+    }
 
     .top-line{
         width: 100%;
@@ -366,6 +384,8 @@ iframe{
         height: auto;
         margin-top: 5em;
         margin-right: 10em;
+        overflow: hidden;
+        display: none;
     }
     .h2{
         display: none;
@@ -382,29 +402,41 @@ iframe{
         font-size: 0.7em;
     }
     .welcome-container{
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: start;
         align-items: start;
-        margin-right: 3em;
         margin-top: 0.3em;
-        padding-left: 10em;
+
+
     }
 
     #home{
         overflow: hidden;
         display: inline-flex !important;
-        justify-content: center !important;
+        justify-content: start !important;
         align-items: center !important;
         height: 20em;
+        width: 100% !important;
+        background-image: url("images/Frame.jpg");
+        filter: brightness(95%);
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat;
     }
 
     #info-sk{
 
         flex-direction: column;
         margin: 0 !important;
+        width: 90%;
+
     }
     #info-pp{
         flex-direction: column;
+        margin: 0 !important;
+        width: 90%;
 
     }
 
@@ -423,8 +455,8 @@ iframe{
         flex-direction: column !important;
         justify-content: space-between !important;
         align-items: center;
+        width: 100%;
     }
-
 
 
     .second-line{
@@ -491,112 +523,7 @@ iframe{
 
 }
 
-@media (max-width: 970px) {
 
-    #home{
-        overflow: hidden;
-        
-    }
-
-    #footer{
-        width: 100%;
-        height: auto;
-        display: flex !important;
-        flex-direction: column !important;
-        flex-wrap: wrap;
-        align-items: center !important;
-    }
-
-    .footer-menu{
-        flex: 1;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-    }
-
-
-    .footer-menu ul li{
-        display: flex;
-        align-items: start !important;
-        justify-content: start !important;
-        padding-left: 3em !important;
-    }
-
-    #info-sk{
-        grid-template-columns: repeat(2, 1fr) !important;
-        height: 10em;
-        width: 90%;
-    }
-
-    .info h3{
-        font-size: 1.2em;
-        margin: 0;
-        padding: 0;
-    }
-
-    #info-sk div{
-        flex: 1;
-        font-size: 0.9em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    #info-pp{
-        grid-template-columns: repeat(2, 1fr) !important;
-        height: 10em;
-        width: 90%;
-
-    }
-
-    .info p{
-        color: #f3f3eb;
-        margin: 6px 0 6px 0;
-        padding: 0;
-        font-size: 0.95em;
-    }
-
-    .info p:visited{
-        color: #f3f3eb;
-    }
-
-    #info-pp div{
-        flex: 1;
-        font-size: 0.9em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-
-    iframe{
-        height: 10em;
-        width: 100%;
-    }
-
-    .location-container{
-        height: 20em;
-        width: 90%;
-    }
-
-    #contact{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        height: auto;
-        padding-bottom: 0;
-    }
-
-    .tel:visited{
-        color: #f3f3eb;
-        cursor: pointer;
-    }
-}
 
 /*Uslugi index*/
 
@@ -723,14 +650,316 @@ iframe{
     color: #f3f3eb;
 }
 
+
+
+@media (max-width: 1324px) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+
+    .services-list .card{
+        width: 22em;
+    }
+
+    .services-list .card img{
+        width: 20em;
+    }
+
+    .lokacija,
+    .telefon,
+    .email{
+        width: 15em;
+    }
+
+    .lokacija p{
+        text-align: center;
+    }
+
+    iframe{
+        width: 85vw;
+        padding-bottom: 3em;
+        padding-top: 3em;
+    }
+
+    .footer-menu h2{
+        height: 1.3em;
+        font-size: 1.2em;
+    }
+
+    .info{
+        padding-top: 2em;
+    }
+
+    #home{
+        overflow: hidden;
+    }
+
+    .gallery-container .card{
+        width: 19em;
+    }
+    
+}
+@media (max-width: 970px) {
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    #home{
+        overflow: hidden !important;
+        background-image: url("images/Frame 1.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat;
+
+    }
+
+
+
+    #footer{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding-bottom: 2em;
+
+    }
+
+    .footer-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .footer-menu ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+
+
+    .footer-menu ul li{
+        display: flex;
+        align-items: start !important;
+        justify-content: start !important;
+
+    }
+
+    .lokacija,
+    .telefon,
+    .email{
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+
+    .info p:visited{
+        color: #f3f3eb;
+    }
+
+    iframe{
+        height: 15em;
+        width: 95vw;
+    }
+
+    .location-container{
+        height: 25em;
+        width: 90%;
+    }
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .tel:visited{
+        color: #f3f3eb;
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 940px) {
     .services-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    .top-line-right a{
+        margin-left: 1em;
+        font-size: 0.9em;
+    }
+
+    .top-line-left a{
+
+        font-size: 0.9em;
+    }
+    #home{
+        width: 100%;
+        background-color: #f3f3eb;
+        overflow: hidden !important;
+    }
+
+    .welcome-container{
+        margin-left: 3em;
+        margin-top: 1.5em;
+    }
+    .h2{
+        width: 15em;
+    }
+
+    .location-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    iframe{
+        width: 85vw;
+        margin: 0;
+        padding: 0;
+        height: 20em;
+    }
+
+    .info{
+        margin: 2em;
+    }
+    .lokacija,
+    .telefon,
+    .email{
+        margin: 0.2em !important;
+        width: 15em !important;
+    }
+
+    /*#footer{*/
+    /*    grid-template-columns: repeat(2, 1fr);*/
+
+    /*}*/
+
+}
+
+@media (max-width: 770px) {
+
+    .lokacija,
+    .telefon,
+    .email{
+        margin: 0.2em !important;
+    }
+
+    .top-line{
+        justify-content: space-between;
+        padding-left: 0.8em !important;
+        padding-right: 0.8em !important;
+    }
+
 }
 
 @media (max-width: 650px) {
     .services-list {
         grid-template-columns: repeat(1, 1fr);
     }
+    #home{
+        height: 23em;
+        background-image: url("/images/Frame 1.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat;
+
+    }
+
+    .welcome-container{
+        margin-left: 1em !important;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 0.3em;
+
+    }
+    .location-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    iframe{
+        width: 23em;
+        height: 15em;
+    }
+    #footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .footer-menu ul{
+        align-items: start;
+    }
+    .footer-menu li{
+        margin-left: 1em;
+    }
+
+    .location-picker h2{
+        font-size: 2.3em;
+    }
+
+    .location-picker button{
+        height: 3em;
+        width: 9em;
+        font-size: 2em;
+    }
+    .location-picker{
+        margin: 2em;
+    }
+    .lokacija,
+    .telefon,
+    .email{
+        margin: 0.5em !important;
+
+    }
+
+
+}
+
+@media (max-width: 450px) {
+
+    .top-line{
+        padding: 0 !important;
+    }
+
+}
+
+@media (max-width: 391px) {
+    .services-list .card{
+        width: 15em;
+        height: 20em;
+    }
+
+    .location-container{
+        width: 100vw;
+    }
+
+    iframe{
+        margin: 0;
+        padding: 0;
+        width: 80vw;
+    }
+
+    .top-line-left a,
+    .top-line-right a{
+        font-size: 0.8em;
+    }
+
 }
