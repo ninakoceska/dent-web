@@ -106,6 +106,7 @@ body{
 }
 
 #home{
+    overflow: hidden;
     background-color: #f3f3eb;
     width: 100%;
     height: 40em;
@@ -116,12 +117,21 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.home-image{
+.image-container{
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-    width: 40em;
+.home-image{
+    width: 30em;
     height: auto;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
 }
 
 @keyframes fadeIn {
@@ -340,6 +350,8 @@ iframe{
 
 
 
+
+
 /*Uslugi index*/
 
 #index-sercives{
@@ -467,7 +479,7 @@ iframe{
 
 
 
-@media (max-width: 1104px) {
+@media (max-width: 1324px) {
     .services-list {
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
@@ -513,8 +525,13 @@ iframe{
     .gallery-container .card{
         width: 19em;
     }
+
+    .home-image{
+        width: 38em;
+    }
     
 }
+
 @media (max-width: 970px) {
 
     body{
@@ -524,11 +541,6 @@ iframe{
 
     #home{
         overflow: hidden !important;
-        background-image: url("images/small-bg.jpg") !important;
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat;
-
     }
 
 
@@ -607,7 +619,7 @@ iframe{
 
 @media (max-width: 940px) {
     .services-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
 
@@ -674,80 +686,11 @@ iframe{
 
     .top-line{
         justify-content: space-between;
-        padding-left: 0.8em !important;
-        padding-right: 0.8em !important;
+        /*padding-left: 0.8em !important;*/
+        /*padding-right: 0.8em !important;*/
     }
 
 }
-
-@media (max-width: 650px) {
-    .services-list {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    #home{
-        height: 23em;
-        background-image: url("/images/small-bg.jpg") !important;
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat;
-
-    }
-
-    .welcome-container{
-        margin-left: 1em !important;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        margin-top: 0.3em;
-
-    }
-    .location-container{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    iframe{
-        width: 23em;
-        height: 15em;
-    }
-    #footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-    }
-    .footer-menu ul{
-        align-items: start;
-    }
-    .footer-menu li{
-        margin-left: 1em;
-    }
-
-    .location-picker h2{
-        font-size: 2.3em;
-    }
-
-    .location-picker button{
-        height: 3em;
-        width: 9em;
-        font-size: 2em;
-    }
-    .location-picker{
-        margin: 2em;
-    }
-    .lokacija,
-    .telefon,
-    .email{
-        margin: 0.5em !important;
-
-    }
-
-
-}
-
 
 @media(max-width: 767px) {
 
@@ -757,9 +700,6 @@ iframe{
         width: 100%;
     }
 
-    .image-container{
-        display: none;
-    }
 
     .top-line{
         width: 100%;
@@ -791,12 +731,7 @@ iframe{
     }
 
     .home-image{
-        width: 15em;
-        height: auto;
-        margin-top: 5em;
-        margin-right: 10em;
-        overflow: hidden;
-        display: none;
+        width: 22em;
     }
     .h2{
         display: none;
@@ -830,11 +765,6 @@ iframe{
         align-items: center !important;
         height: 20em;
         width: 100% !important;
-        background-image: url("images/Frame.jpg");
-        filter: brightness(95%);
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat;
     }
 
     #info-sk{
@@ -934,6 +864,69 @@ iframe{
 
 }
 
+@media (max-width: 650px) {
+    .services-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #home{
+        height: 23em;
+
+    }
+
+    .welcome-container{
+        margin-left: 1em !important;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 0.3em;
+
+    }
+    .location-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    iframe{
+        width: 23em;
+        height: 15em;
+    }
+    #footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .footer-menu ul{
+        align-items: start;
+    }
+    .footer-menu li{
+        margin-left: 1em;
+    }
+
+    .location-picker h2{
+        font-size: 2.3em;
+    }
+
+    .location-picker button{
+        height: 3em;
+        width: 9em;
+        font-size: 2em;
+    }
+    .location-picker{
+        margin: 2em;
+    }
+    .lokacija,
+    .telefon,
+    .email{
+        margin: 0.5em !important;
+
+    }
+
+
+}
 
 @media (max-width: 450px) {
 
